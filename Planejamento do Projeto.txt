@@ -1,0 +1,45 @@
+    BASE DE DADOS
+
+- INVENTARIO DE PRODUTOS
+- CAIXA DINHEIRO
+- CONTAGEM DE VENDAS
+
+
+    PLANEJAMENTO DAS FUNÇÕES (STRUCTS)
+
+- Liberar produto
+
+
+    ESCOPO DO MENU DO USUARIO
+
+- Inicio
+
+- Menu Usuario
+  - Listar itens disponíveis
+
+  1. Selecionar Produto
+     
+     - Descreve produto selecionado
+
+     1. Comprar
+        - Descreve valor a pagar
+        - Escolha forma de pagamento
+
+        1. PIX
+           - Gerar QR Code
+           - Confirma pagamento
+           - Libera produto
+
+        2. Dinheiro
+           - Confirma pagamento
+           - Confere valor
+           - Libera troco
+           - Libera produto
+
+        3. Cartão
+           - Seleciona crédito ou débito
+           - Confirma pagamento
+           - Libera produto
+
+  2. Sair
+     - Volta ao menu
