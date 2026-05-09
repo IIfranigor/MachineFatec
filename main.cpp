@@ -1,10 +1,14 @@
 //FATEC BEBEDOURO 2026 - 4° SEMESTRE BIG DATA NO AGRONEGÓCIO
 //ALUNO: VICTOR DOS SANTOS QUEIROZ | RA: 2801262423001
 //ALUNO: IGOR IFRAN | RA:
-#include <iostream>
+
+#include <iostream> // Biblioteca para entrada e saída de dados
+#include <String> // Biblioteca para manipulação de strings
+
 using namespace std;
 
 // Struct de No Duplo que armazenara os dados dos produtos
+
 struct Produto {
     int id; //id do local onde o produto esta armazenado
     string nome;
@@ -66,7 +70,63 @@ void inserirProduto(Produto* &head, Produto* &tail, int id, string nome, float v
 
     
 }
-int main() {
+int main(){
     cout << "Maquina de vendas de conveniencia" << endl;
+    // Pressiona enter para acessar o menu de usuario padrao e digite 9 para acessar administrativo
+    string acesso;
+    char opcao;
+   getline(cin, acesso);
+    // Aguarda o usuário pressionar digitar para acessar o menu de opções
+
+    // menu de opções administrativas para o usuário escolher a ação desejada
+    if (acesso == "9") {
+        cout << "Acesso administrativo concedido" << endl;
+        cout << "Selecione a opção desejada:" << endl;
+        cout << "1 - Cadastrar produto" << endl;
+        cout << "2 - Listar produtos" << endl;
+        cout << "3 - Sair" << endl;
+
+        cin >> opcao; // Aguarda o usuário digitar a opção desejada
+
+        switch (opcao) {
+            case '1':
+                cout << "Cadastrar produto" << endl;
+                break;
+            case '2':
+                cout << "Listar produtos" << endl;
+                break;
+            case '3':
+                cout << "Sair" << endl;
+                break;
+            default:
+                cout << "Opção inválida" << endl;
+
+        }
+        return 0;
+    }else{
+        cout << "Bem-vindo ao menu de usuário padrão" << endl;
+        cout << "Selecione a opção desejada:" << endl;
+        cout << "1 - Comprar produto" << endl;
+        cout << "2 - Listar produtos" << endl;
+        cout << "3 - Sair" << endl;
+        cin >> opcao; // Aguarda o usuário digitar a opção desejada
+
+
+        //menu de opções para o usuário padrão escolher a ação desejada
+        switch (opcao) {
+            case '1':
+                cout << "Comprar produto" << endl;
+                break;
+            case '2':
+                cout << "Listar produtos" << endl;
+                break;
+            case '3':
+            cout << "Sair" << endl;
+                break;
+            default:
+                cout << "Opção inválida" << endl;
+        };
+    }
+
     return 0;
 };
